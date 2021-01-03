@@ -1,38 +1,36 @@
-import { React, useEffect, useState } from "react";
-import { Card } from "semantic-ui-react";
+import React, { useState, useEffect } from "react";
 
 function CommitListComponent() {
-  const [commit, setCommits] = useState([]);
+  const [commits, setCommits] = useState([]);
 
   useEffect(() => {
     fetch("https://api.github.com/repos/ajonesb/react-js-movies/commits")
-      .then((res) => res.json())
+      .then((response) => response.json())
       .then((data) => {
-        console.log(data);
-        setCommitData(data);
+        setCommits(data);
       });
   }, []);
 
-  const setCommitData = ({ commit }) => {
-    setCommits(commit);
-  };
-
   return (
-    <div className="card">
-      <Card>
-        <Card.Content>
-          <Card.Header>
-            {commit}
-            {/* <ul>
-              {commits.map((commit) => (
-                <li key={commit.id}>
-                  {commit.author.name}: {commit.message}
-                </li>
-              ))}
-            </ul> */}
-          </Card.Header>
-        </Card.Content>
-      </Card>
+    <div className="container-fluid">
+      <div className="row">
+        {commits.map((commit) => (
+          <div className="col-md-4 card" key={commit.node_id}>
+            <span className="card-body">
+              <h2 className="card-title">Node ID:</h2>
+              <p className="card-text">{commit.sha}</p>
+            </span>
+            <span className="card-body">
+              <h2 className="card-title">Commit Message:</h2>
+              <p className="card-text"> {commit.commit.message}</p>
+            </span>
+            <span className="card-body">
+              <h2 className="card-title">Commit URL:</h2>
+              <p className="card-text">{commit.commit.url}</p>
+            </span>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

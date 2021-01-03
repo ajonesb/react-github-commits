@@ -13,12 +13,3 @@ code {
 }
 
 
-html, body {
-  height: 100%;
-  color: #ffffff;
-  height: 100%;
-  /* background: url('./assets/github.jpg') no-repeat center center fixed!important; */
-  background-size: cover;
-  background-position: fixed;
-  background-color: black;
-}
