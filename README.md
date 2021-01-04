@@ -2,6 +2,18 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+## Summary of Project
+This project was developed wih React Hooks functional components to consume the Github API for showing a github user :
+https://docs.github.com/en/free-pro-team@latest/rest/reference/users
+
+and showing the most recent commits:
+https://docs.github.com/en/free-pro-team@latest/rest/reference/search#search-commits
+
+- The project basically shows the most recent commits pushed to github for the project and 
+the user profile of the developer. 
+
+
 ## Available Scripts
 
 In the project directory, you can run:
