@@ -14,7 +14,7 @@ function CommitListComponent() {
   return (
     <div className="container-fluid">
       <div className="row">
-        <h1>Most Recent Commits</h1>
+        <h1> Git Commit History for Project</h1>
         {commits.map((commit) => (
           <div className="col-md-4 card" key={commit.node_id}>
             <span className="card-body">
@@ -27,7 +27,7 @@ function CommitListComponent() {
                 href={commit.html_url}
                 role="button"
               >
-                Visit Commit on Github
+                View Github Commit
               </a>
             </span>
           </div>

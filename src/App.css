@@ -37,21 +37,4 @@
   }
 }
 
-.navbar {
-  padding: 20px;
-  background-color: black;
-  color: white;
-}
-
-.search {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.card {
-  display: flex;
-  justify-content: center;
-}
-
 
