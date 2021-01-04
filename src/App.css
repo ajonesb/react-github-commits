@@ -28,13 +28,44 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.image {
+  max-width: 150px!important;
+  margin: auto;
+  padding: 20px!important;
+  background:none!important;
+}
+
+.profile-button-wrap {
+  margin: 10px auto 10px;
+  width:100%;
+  border-top: 1px solid rgb(233, 233, 233);
+  border-bottom: 1px solid rgb(233, 233, 233);
+  padding: 10px;
+}
+
+.commit-list-title{
+  font-size: 18px;
 }
 
 
+@media (max-width: 1000px) {
+  .ui.card {
+    margin: 10px auto!important;
+    width: 100%!important;
+    padding-bottom: 42px!important;
+    border: 0px;
+  }
+}
+ 
+@media (min-width: 1001px) {
+  .ui.card {
+    margin: 0px auto;
+    width: 100%!important;
+    padding-bottom: 0px;
+    border: 0px;
+  }
+
+  .profile-button-wrap {
+    margin: 0px;
+  }
+}

@@ -12,13 +12,12 @@ function CommitListComponent() {
   }, []);
 
   return (
-    <div className="container-fluid">
-      <div className="row">
-        <h1> Git Commit History for Project</h1>
+    <div>
+        <h1 className="mt-2 commit-list-title"> GIT COMMIT HISTORY FOR PROJECT</h1>
         {commits.map((commit) => (
-          <div className="col-md-4 card" key={commit.node_id}>
+          <div className="col-md-12 card" key={commit.node_id}>
             <span className="card-body">
-              <h2 className="card-title">Commit Message:</h2>
+              <h3 className="card-title">Commit Message:</h3>
               <p className="card-text"> {commit.commit.message}</p>
             </span>
             <span className="card-body">
@@ -32,7 +31,7 @@ function CommitListComponent() {
             </span>
           </div>
         ))}
-      </div>
+      
     </div>
   );
 }

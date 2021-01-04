@@ -41,12 +41,11 @@ function UserGitProfile() {
     <div>
       <div className="card">
         <Card>
-          <Image src={avatar} wrapped ui={false} />
-          <Card.Content>
-            <Card.Header>
-              <Icon name="user icon" />
-              {name}
-            </Card.Header>
+          <Image classname="avatar" src={avatar} wrapped ui={false} />
+          <Card.Content extra>
+            <Card.Header>{name}</Card.Header>
+          </Card.Content>
+          <Card.Content extra>
             <Card.Header>
               <Icon name="code" />
               {userName}
@@ -67,13 +66,17 @@ function UserGitProfile() {
             </p>
           </Card.Content>
 
-          <a className="btn btn-primary" href={html_url} role="button">
-            Visit Github
-          </a>
+          <div className="profile-button-wrap">
+            <a className="btn btn-primary" href={html_url} role="button">
+              Visit Github
+            </a>
+          </div>
 
-          <a className="btn btn-secondary" href={blog} role="button">
-            Visit Portfolio
-          </a>
+          <div className="profile-button-wrap">
+            <a className="btn btn-secondary" href={blog} role="button">
+              Visit Portfolio
+            </a>
+          </div>
         </Card>
       </div>
     </div>
